@@ -1,0 +1,68 @@
+.caja {
+  width: 200px;
+  height: 200px;
+  background: #000;
+  position: relative;
+  /* animation: name duration delay timing-function iteration-count direction fill-mode; */
+  animation-name: moveSquare;
+  animation-timing-function: ease;
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moveSquare {
+  0% {
+    background: #000;
+    top: 0;
+    left: 0;
+  }
+  25% {
+    background: #28ff7b;
+    top: 0;
+    left: 300px;
+    border-radius: 50%;
+    box-shadow: -4px -4px 8px #000;
+  }
+  50% {
+    background: #ff1111;
+    top: 300px;
+    left: 300px;
+    transform: rotate(180deg);
+  }
+  75% {
+    background: #11a4ff;
+    top: 300px;
+    left: 0;
+    box-shadow: 4px 4px 8px #000;
+  }
+  100% {
+    background: #f9f622;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.bg_animado {
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+  background: linear-gradient(45deg, #218cff, #1121ff, #11d3ff, #1131ff);
+  background-size: 400% 400%;
+  animation: bgMove 10s ease-in-out infinite;
+  position: relative;
+}
+
+@keyframes bgMove {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
